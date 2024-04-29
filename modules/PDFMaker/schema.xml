@@ -1,0 +1,98 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_pdfmaker</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_pdfmaker` (
+  `templateid` int NOT NULL,
+  `filename` varchar(100) NOT NULL,
+  `module` varchar(255) NOT NULL,
+  `body` longblob NOT NULL,
+  `description` text NOT NULL,
+  `deleted` int NOT NULL DEFAULT '0',
+  PRIMARY KEY (`templateid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></sql>
+		</table>
+		<table>
+			<name>vtiger_pdfmaker_seq</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_pdfmaker_seq` (
+  `id` int NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></sql>
+		</table>
+		<table>
+			<name>vtiger_pdfmaker_settings</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_pdfmaker_settings` (
+  `templateid` int NOT NULL,
+  `margin_top` decimal(12,1) DEFAULT NULL,
+  `margin_bottom` decimal(12,1) DEFAULT NULL,
+  `margin_left` decimal(12,1) DEFAULT NULL,
+  `margin_right` decimal(12,1) DEFAULT NULL,
+  `format` varchar(255) NOT NULL DEFAULT 'A4',
+  `orientation` varchar(255) NOT NULL DEFAULT 'portrait',
+  `decimals` tinyint NOT NULL,
+  `decimal_point` char(2) NOT NULL,
+  `thousands_separator` char(2) NOT NULL,
+  `header` text NOT NULL,
+  `footer` text NOT NULL,
+  `encoding` varchar(20) NOT NULL DEFAULT 'auto',
+  `file_name` varchar(255) DEFAULT NULL,
+  `is_portal` tinyint(1) NOT NULL DEFAULT '0',
+  `is_listview` tinyint(1) NOT NULL DEFAULT '0',
+  `owner` int NOT NULL DEFAULT '1',
+  `sharingtype` char(7) NOT NULL DEFAULT 'public',
+  `disp_header` tinyint(1) NOT NULL DEFAULT '3',
+  `disp_footer` tinyint(1) NOT NULL DEFAULT '7',
+  PRIMARY KEY (`templateid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></sql>
+		</table>
+		<table>
+			<name>vtiger_pdfmaker_breakline</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_pdfmaker_breakline` (
+  `crmid` int NOT NULL,
+  `productid` int NOT NULL,
+  `sequence` int NOT NULL,
+  `show_header` tinyint(1) NOT NULL DEFAULT '0',
+  `show_subtotal` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`crmid`,`productid`,`sequence`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></sql>
+		</table>
+		<table>
+			<name>vtiger_pdfmaker_images</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_pdfmaker_images` (
+  `crmid` int NOT NULL,
+  `productid` int NOT NULL,
+  `sequence` int NOT NULL,
+  `attachmentid` int NOT NULL,
+  `width` int DEFAULT NULL,
+  `height` int DEFAULT NULL,
+  PRIMARY KEY (`crmid`,`productid`,`sequence`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></sql>
+		</table>
+		<table>
+			<name>vtiger_pdfmaker_releases</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_pdfmaker_releases` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `version` varchar(10) NOT NULL,
+  `date` datetime NOT NULL,
+  `updated` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3]]></sql>
+		</table>
+		<table>
+			<name>vtiger_pdfmaker_productbloc_tpl</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_pdfmaker_productbloc_tpl` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `body` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3]]></sql>
+		</table>
+		<table>
+			<name>vtiger_pdfmaker_ignorepicklistvalues</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_pdfmaker_ignorepicklistvalues` (
+  `value` varchar(100) NOT NULL,
+  PRIMARY KEY (`value`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></sql>
+		</table>
+	</tables>
+</schema>
