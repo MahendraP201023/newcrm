@@ -1,0 +1,206 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<hr />
+<div style="text-align: center;"><strong><span>TAX INVOICE</span></strong></div>
+
+<hr />&nbsp;
+<div style="width: 100%;">
+<div style="width: 50%; float: right;">
+<table align="right" border="0" cellpadding="1" cellspacing="1" style="width:400px;">
+	<tbody>
+		<tr>
+			<td style="float: right !important; border: 0;">Invoice No.:</td>
+			<td style="border: 1px solid;">$INVOICE_INVOICE_NO$</td>
+		</tr>
+		<tr>
+			<td style="float: right !important; border: 0;">Invoice Date:</td>
+			<td style="border: 1px solid;">$INVOICE_INVOICEDATE$</td>
+		</tr>
+		<tr>
+			<td style="float: right !important; border: 0;">e-Way Bill No.:</td>
+			<td style="border: 1px solid;"><strong>-</strong></td>
+		</tr>
+		<tr>
+			<td style="float: right !important; border: 0;">Our GSTIN:</td>
+			<td style="border: 1px solid;"><strong>29AAGCI9975H1ZS</strong></td>
+		</tr>
+		<tr>
+			<td style="float: right !important; border: 0;">Our Company PAN:</td>
+			<td style="border: 1px solid;"><strong>AAGCI9975H</strong></td>
+		</tr>
+		<tr>
+			<td style="float: right !important; border: 0;">Our Company TAN:</td>
+			<td style="border: 1px solid;"><strong>BLRI12518C</strong></td>
+		</tr>
+		<tr>
+			<td style="float: right !important; border: 0;">Party GSTIN:</td>
+			<td style="border: 1px solid;"><strong>29AAHC454721368</strong></td>
+		</tr>
+		<tr>
+			<td style="float: right !important; border: 0;">Our Quotation / PSOW No.:</td>
+			<td style="border: 1px solid;"><strong>122/2023-24</strong></td>
+		</tr>
+		<tr>
+			<td style="float: right !important; border: 0;">Quotation / PSOW Date:</td>
+			<td style="border: 1px solid;"><strong>05-Apr-2024</strong></td>
+		</tr>
+		<tr>
+			<td style="float: right !important; border: 0;">Customer Order No.</td>
+			<td style="border: 1px solid;"><strong>PO-763</strong></td>
+		</tr>
+		<tr>
+			<td style="float: right !important; border: 0;">Customer Order Date</td>
+			<td style="border: 1px solid;"><strong>05-Apr-2024</strong></td>
+		</tr>
+		<tr>
+			<td style="float: right !important; border: 0;">Number of Credit days:</td>
+			<td style="border: 1px solid;"><strong>0</strong></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div style="width: 50%; float: left;">
+<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:400px;">
+	<tbody>
+		<tr>
+			<td><img alt="" src="https://www.inzinc.in/images/logo.png" /></td>
+		</tr>
+		<tr>
+			<td>$COMPANY_NAME$<br />
+			$COMPANY_ADDRESS$<br />
+			$COMPANY_CITY$<br />
+			$COMPANY_STATE$<br />
+			$COMPANY_ZIP$<br />
+			$COMPANY_COUNTRY$<br />
+			Email: $COMPANY_FAX$<br />
+			Website: $COMPANY_WEBSITE$<br />
+			Ph: $COMPANY_PHONE$</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+&nbsp;<br />
+<br />
+&nbsp;
+<div style="width: 100%;">
+<div style="width: 50%; float: right;">
+<table align="right" border="0" cellpadding="1" cellspacing="1" style="width:400px;">
+	<tbody>
+		<tr>
+			<td>Ship to:<br />
+			$INVOICE_ACCOUNT_ID$<br />
+			<br />
+			$INVOICE_SHIP_STREET$<br />
+			$INVOICE_SHIP_CITY$<br />
+			$INVOICE_SHIP_STATE$<br />
+			$INVOICE_SHIP_CODE$<br />
+			$INVOICE_SHIP_COUNTRY$<br />
+			<br />
+			<strong>Client Contact Numbers: </strong>$R_CONTACTID_MOBILE$<br />
+			<strong>Client Contact: </strong>$R_CONTACTID_LASTNAME$<br />
+			<strong>Client Email id: </strong>$R_CONTACTID_EMAIL$</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div style="width: 50%; float: left;">
+<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:400px;">
+	<tbody>
+		<tr>
+			<td>Bill to:<br />
+			$INVOICE_ACCOUNT_ID$<br />
+			<br />
+			$INVOICE_BILL_STREET$<br />
+			$INVOICE_BILL_CITY$<br />
+			$INVOICE_BILL_STATE$<br />
+			$INVOICE_BILL_CODE$<br />
+			$INVOICE_BILL_COUNTRY$<br />
+			<br />
+			<strong>Client Contact Numbers: </strong>$R_CONTACTID_MOBILE$<br />
+			<strong>Client Contact: </strong>$R_CONTACTID_LASTNAME$<br />
+			<strong>Client Email id: </strong>$R_CONTACTID_EMAIL$</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+&nbsp;  
+
+<table border="1" cellpadding="3" cellspacing="0" style="font-size:10px;" width="100%">
+	<thead>
+		<tr bgcolor="#c0c0c0">
+			<td style="TEXT-ALIGN: center"><span><strong>Pos</strong></span></td>
+			<td colspan="2" style="TEXT-ALIGN: center"><span><strong>%G_Qty%</strong></span></td>
+			<td style="TEXT-ALIGN: center"><span><span style="font-weight: bold;">Text</span></span></td>
+			<td style="TEXT-ALIGN: center"><span><strong>%G_LBL_LIST_PRICE%</strong></span></td>
+			<td style="text-align: center;"><strong>%G_Subtotal%</strong></td>
+			<td style="TEXT-ALIGN: center"><span><strong>%G_Discount%</strong></span></td>
+			<td style="TEXT-ALIGN: center"><span><strong>%M_Total%</strong></span></td>
+		</tr>
+	</thead>
+	<tbody>
+		#PRODUCTBLOC_START#
+		<tr>
+			<td style="text-align: center; vertical-align: top;">$PRODUCTPOSITION$</td>
+			<td align="right" colspan="2" valign="top">$PRODUCTQUANTITY$</td>
+			<td align="left" valign="top">$PRODUCTNAME$</td>
+			<td align="right" style="text-align: right;" valign="top">$PRODUCTLISTPRICE$</td>
+			<td align="right" style="TEXT-ALIGN: right" valign="top">$PRODUCTTOTAL$</td>
+			<td align="right" style="TEXT-ALIGN: right" valign="top">$PRODUCTDISCOUNT$</td>
+			<td align="right" style="text-align: right;" valign="top">$PRODUCTSTOTALAFTERDISCOUNT$</td>
+		</tr>
+		#PRODUCTBLOC_END#
+		<tr>
+			<td colspan="7" style="TEXT-ALIGN: left">Total without TAX</td>
+			<td style="TEXT-ALIGN: right">$TOTALAFTERDISCOUNT$</td>
+		</tr>
+		<tr>
+			<td colspan="7" style="text-align: left;">%G_Tax% $VATPERCENT$ % %G_LBL_LIST_OF% $TOTALAFTERDISCOUNT$</td>
+			<td style="text-align: right;">$VAT$</td>
+		</tr>
+		<tr>
+			<td colspan="7" style="TEXT-ALIGN: left"><span style="font-weight: bold;">%G_LBL_GRAND_TOTAL% </span><strong>($CURRENCYCODE$)</strong></td>
+			<td nowrap="nowrap" style="TEXT-ALIGN: right"><strong>$TOTAL$</strong></td>
+		</tr>
+	</tbody>
+</table>
+&nbsp;
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td><strong>TERMS &amp; CONDITIONS</strong></td>
+			<td><strong>OUR BANK DETAILS FOR PAYMENT</strong></td>
+		</tr>
+		<tr>
+			<td>$INVOICE_TERMS_CONDITIONS$</td>
+			<td>Name: INZINC CONSULTING INDIA PRIVATE LIMITED<br />
+			<br />
+			Current Account Number: 50200077627251<br />
+			<br />
+			Bank: HDFC Bank Ltd.<br />
+			<br />
+			Branch: Padmanabhanagar, Bangalore<br />
+			<br />
+			IFS Code: HDFC0000877<br />
+			<br />
+			MICR: 560240030 ; SWIFT Code: HDFCINBB</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<br />
+<strong>for </strong>$COMPANY_NAME$<br />
+<br />
+<br />
+<br />
+<br />
+Authorized Signatory<br type="_moz" />
+&nbsp;</body>
+</html>
