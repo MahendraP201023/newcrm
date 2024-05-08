@@ -3117,9 +3117,31 @@ Vtiger.Class("Vtiger_Detail_Js",{
 	},
 	
 	registerEventForExportServiceContracts : function() {
-		jQuery('#exportServiceContracts').on('click', function(){
+		/*jQuery('#exportServiceContracts').on('click', function(){
 			var recordId = jQuery('#recordId').val();
 			var url = 'index.php?module=ServiceContracts&view=ExportPDF&record='+recordId;
+			window.location.href = url;
+		});*/
+
+		jQuery('#exportServiceContracts').on('click', function(){
+			var recordId = jQuery('#recordId').val();
+
+			var params = {
+	            module: 'ServiceContracts',
+	            view: 'ExportPDF',
+	            mode: 'exportPDFPopup',
+	            record: recordId
+	        };
+	        app.helper.showProgress();
+	        app.request.post({data: params}).then(function (err, res) {
+	        	app.helper.hideProgress();
+	            app.helper.showPopup(res);
+	        });
+		});
+
+		jQuery('#downloadServiceContracts').live('click', function(){
+			var recordId = jQuery('#recordId').val();
+			var url = 'index.php?module=ServiceContracts&view=DownloadPDF&record='+recordId;
 			window.location.href = url;
 		});
 	},
